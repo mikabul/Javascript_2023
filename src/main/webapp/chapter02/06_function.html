@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>function</title>
+</head>
+<body>
+	<script>
+		/* !변수가 함수보다 우선순위가 높음! */
+		var result;
+		
+		function add(x, y){
+			return x + y;
+		}
+		
+		var calSum = add;
+		document.write("결과 : " + calSum(5, 10) + "</p>");
+		
+		
+	</script>
+	
+</body>
+</html>

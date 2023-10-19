@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script>
+		function addElement(){
+			var newParagraph = document.createElement('p');
+			newParagraph.textContent="This is a new Paragraph";
+			var myDiv = document.getElementById("myDiv");
+			myDiv.appendChild(newParagraph);
+		}
+	</script>
+</head>
+
+<body>
+	<div id="myDiv" class="red">Hello World</div>
+	<button onclick="addElement()">Add Element</button>
+	
+	<style>
+		.red{color:red}
+		.blue{color:blue}
+	</style>
+	
+</body>
+
+</html>

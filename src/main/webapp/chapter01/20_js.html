@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>if</title>
+</head>
+<body>
+	<input type="button" value="prompt" onclick="func_prompt()"/>
+	
+	<script>
+		function func_prompt(){
+			var gender;
+			var age;
+			if(confirm('남성 인가요?')){
+				gender = "남성";
+			}else{
+				gender = "여성";
+			}
+			if(prompt('나이가 어떻게 되시나요?') >= 20 ){
+				age = " 성인입니다.";
+			}else {
+				age = "미성년자";
+			}
+			
+			document.write(gender + age);
+		}
+	</script>
+</body>
+</html>

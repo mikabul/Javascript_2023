@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title>object</title>
+</head>
+
+<body>
+	<p>[Hong's Car]</p>
+	<p id="hong1"></p>
+	<p id="hong2"></p>
+	<p id="hong3"></p>
+	<p>[Kim's Car]</p>
+	<p id="data1"></p>
+	<p id="data2"></p>
+	<p id="data3"></p>
+	<p id="data4"></p>
+
+	<script>
+
+		function Car(name, color, speed) {
+			this.name = name;
+			this.color = color;
+			this.speed = speed;
+			this.speedup = function () {
+				return this.speed + 10;
+			};
+			this.speeddown = function () {
+				return this.speed - 10;
+			};
+		}
+		
+		var HongCar = new Car("Sonata", "blue", 100);
+		var KimCar = new Car("Jeep", "red", 120);
+		
+		//속성 추가|삭제
+		KimCar.price='4천만원';
+		delete KimCar.color;
+		
+		var cname = document.getElementById("hong1");
+		cname.textContent="자동차 이름 : " + HongCar.name;
+		var ccolor = document.getElementById("hong2");
+		ccolor.textContent="자동차 색상 : " + HongCar.color;
+		var cspeed = document.getElementById("hong3");
+		cspeed.textContent="자동차 속도 : " + HongCar.speedup();
+		
+		var cname2 = document.getElementById("data1");
+		cname2.textContent="자동차 이름 : " + KimCar.name;
+		var ccolor2 = document.getElementById("data2");
+		ccolor2.textContent="자동차 색상 : " + KimCar.color; // 삭제
+		var cspeed2 = document.getElementById("data3");
+		cspeed2.textContent="자동차 속도 : " + KimCar.speedup();
+		var cspeed2 = document.getElementById("data4");
+		cspeed2.textContent="자동차 가격 : " + KimCar.price; // 추가된 속성
+		
+
+	</script>
+</body>
+
+</html>
